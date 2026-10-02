@@ -2,12 +2,12 @@
 
 :root {
     --canvas: #ffffff;
-    --ink: #241a12;
-    --ink-soft: #3a2f22;
-    --olive: #485a84;
+    --ink: #0a0c4b;
+    --ink-soft: #0e0e80;
+    --olive: #0a0c4b;
     --mustard: #d69a2d;
     --card: #efefefb3;
-    --line: rgba(36, 26, 18, 0.15);
+    --line: #381f6e26;
     --muted: #6b5f4d;
     --label: #5c5142;
 }
@@ -1003,5 +1003,31 @@ main { max-width: 1080px; margin: 28px auto 80px; padding: 0 clamp(14px, 4vw, 24
     .header-actions .cart-btn {
         font-size: 12px !important;
         padding: 8px 12px !important;
+    }
+}
+
+#loginScreen header.top .title-block {
+    display: none !important;
+}
+
+/* ===== Banner completo no computador (versão forte) ===== */
+@media (min-width: 721px) {
+    header.top {
+        min-height: 280px !important;
+        height: 280px !important;
+        background-image: url('img/def.jpg') !important;
+        background-size: contain !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+        background-color: #0a1a4a; /* cor de fundo caso sobrar espaço */
+        padding: 0 !important;
+    }
+
+    /* Esconde a escrita */
+    #loginScreen header.top .title-block,
+    #loginScreen header.top .eyebrow,
+    #loginScreen header.top h1,
+    #loginScreen header.top p {
+        display: none !important;
     }
 }
